@@ -1,4 +1,3 @@
-#!/bin/sh ruby
 # frozen_string_literal: true
 
 require 'optparse'
