@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# --- Day 1: Trebuchet?! ---
+#
 # Part 1
 #
 # On each line, the calibration value can be found by combining
