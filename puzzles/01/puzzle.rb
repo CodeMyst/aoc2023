@@ -60,8 +60,6 @@ class Puzzle01
   end
 
   def numeric?(char)
-    true if Integer(char)
-  rescue ArgumentError
-    false
+    char =~ /\d/
   end
 end
