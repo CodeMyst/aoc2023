@@ -24,7 +24,7 @@ def get_puzzle_input(day)
 end
 
 def all_days
-  Dir.children('./puzzles').map { |entry| File.basename(entry).to_i }
+  Dir.children('./puzzles').map { |entry| File.basename(entry).to_i }.sort
 end
 
 def parse_options
