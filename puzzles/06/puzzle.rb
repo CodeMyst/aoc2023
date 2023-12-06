@@ -15,7 +15,7 @@ class Puzzle06
     distances = lines.last.split(':').last.split(' ').map(&:chomp).map(&:to_i)
 
     races = times.zip(distances)
-    races.map { |r| get_number_of_wins(r[0], r[1]) }.inject(:*)
+    races.map { |r| get_number_of_wins(r[0], r[1]) + 1 }.inject(:*)
   end
 
   def solve_part2(input)
@@ -23,14 +23,14 @@ class Puzzle06
     time = lines.first.split(':').last.delete(' ').to_i
     distance = lines.last.split(':').last.delete(' ').to_i
 
-    get_number_of_wins time, distance
+    get_number_of_wins(time, distance) + 1
   end
 
   private
 
   def get_number_of_wins(time, distance)
-    max_time = ((time + Math.sqrt(time * time - 4 * distance)) / 2.0).floor
-    min_time = ((time - Math.sqrt(time * time - 4 * distance)) / 2.0).floor
+    max_time = ((time + Math.sqrt(time**2 - 4 * distance)) / 2.0).floor
+    min_time = ((time - Math.sqrt(time**2 - 4 * distance)) / 2.0).ceil
 
     max_time - min_time
   end
