@@ -100,7 +100,7 @@ def time_to_human_readable(time_in_seconds)
 
   if time_in_seconds <= 1.0 / 1000.0
     time = time_in_seconds * 1000.0 * 1000.0
-    unit = 'us'
+    unit = 'µs'
   elsif time_in_seconds <= 1.0
     time = time_in_seconds * 1000.0
     unit = 'ms'
