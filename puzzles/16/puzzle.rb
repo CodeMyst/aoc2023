@@ -19,6 +19,8 @@ class Puzzle16
     get_energized_nodes map
   end
 
+  # this takes around a minute
+  # I need to go back and optimize this
   def solve_part2(input)
     map = input.split("\n").map { |l| l.split('').map { |n| [n, false] } }
 
